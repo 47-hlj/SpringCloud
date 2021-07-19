@@ -1,0 +1,10 @@
+# 在注册中心注册的服务名(服务id)
+spring:
+  application:
+    name: item-server
+
+# item  8001
+# user  8101
+# order 8201
+server:
+  port: 8001
