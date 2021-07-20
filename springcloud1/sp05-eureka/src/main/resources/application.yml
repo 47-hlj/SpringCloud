@@ -2,4 +2,4 @@ spring:
   application:
     name: eureka-server
   profiles:
-    active: eureka1
+    active: eureka2

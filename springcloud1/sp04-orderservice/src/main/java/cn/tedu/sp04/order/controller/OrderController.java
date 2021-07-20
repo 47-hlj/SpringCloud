@@ -57,5 +57,12 @@ public class OrderController {
         return JsonResult.ok().msg("订单添加成功");
     }
 
-
+    /**
+     * 用一个空方法过滤掉浏览器自动发起的对网站图标的请求
+     * 避免影响测试
+     */
+    @GetMapping("/favicon.ico")
+    public void ico(){
+        // 空方法
+    }
 }
