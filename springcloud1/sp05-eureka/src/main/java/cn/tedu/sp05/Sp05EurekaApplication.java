@@ -6,13 +6,13 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author 47HLJ
- * @date 2021/7/19 17:47
+ * @date 2021/7/20 9:59
  * @description
  */
-@SpringBootApplication
 @EnableEurekaServer
+@SpringBootApplication
 public class Sp05EurekaApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Sp05EurekaApplication.class,args);
+        SpringApplication.run(Sp05EurekaApplication.class, args);
     }
 }
