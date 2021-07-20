@@ -9,6 +9,7 @@
         <module>sp03-userservice</module>
         <module>sp04-orderservice</module>
         <module>sp05-eureka</module>
+        <module>sp06-zuul</module>
     </modules>
 
     <parent>

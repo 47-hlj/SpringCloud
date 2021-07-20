@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: zuul
+
+# eureka 2001
+# zuul   3001
+server:
+  port: 3001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+# zuul可以根据注册表自动完成默认配置
+# 但最好手动配置，防止注册表不全
+zuul:
+  routes:
+    item-service: /item-service/**
+    user-service: /user-service/**
+    order-service: /order-service/**

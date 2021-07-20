@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/springcloud1/sp03-userservice/sp03-userservice.iml" filepath="$PROJECT_DIR$/springcloud1/sp03-userservice/sp03-userservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud1/sp04-orderservice/sp04-orderservice.iml" filepath="$PROJECT_DIR$/springcloud1/sp04-orderservice/sp04-orderservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud1/sp05-eureka/sp05-eureka.iml" filepath="$PROJECT_DIR$/springcloud1/sp05-eureka/sp05-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud1/sp06-zuul/sp06-zuul.iml" filepath="$PROJECT_DIR$/springcloud1/sp06-zuul/sp06-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud1/springcloud1.iml" filepath="$PROJECT_DIR$/springcloud1/springcloud1.iml" />
     </modules>
   </component>

@@ -7,7 +7,7 @@ spring:
 # user  8101
 # order 8201
 server:
-  port: 8001
+  port: 8002
 
 eureka:
   client:
