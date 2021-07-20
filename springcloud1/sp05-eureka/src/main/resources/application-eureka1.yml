@@ -1,0 +1,17 @@
+# application-eureka2.yml
+#1.激活profile：--spring.profiles.active=eureka1
+#2.会和主动配置文件合并加载
+#3.相同属性.profile生效
+
+server:
+  port: 2001
+
+eureka:
+  instance:
+    hostname: eureka1  # 主机名为了区分集群中的不同服务器
+  client:
+    # 单台服务器，不注册不拉取
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka2:2002/eureka
