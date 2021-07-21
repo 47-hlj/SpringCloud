@@ -46,6 +46,8 @@ public class LoginFilter extends ZuulFilter {
      */
     @Override
     public int filterOrder() {
+        // 第五个过滤器中添加了serviceId
+        // 后面过滤器中才能使用
         return 6;
     }
 

@@ -16,6 +16,7 @@ import java.io.InputStream;
  * @date 2021/7/21 15:23
  * @description 调用订单服务失败时，执行这里的降级代码，返回降级结果
  */
+@Component
 public class OrderFb implements FallbackProvider {
 
     /**
