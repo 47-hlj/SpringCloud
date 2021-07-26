@@ -6,7 +6,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * @author 47HLJ
- * @date 2021/7/26 12:00
+ * @date 2021/7/26 14:32
  * @description
  */
 @SpringBootApplication
