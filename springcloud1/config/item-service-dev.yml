@@ -2,6 +2,9 @@
 spring:
   application:
     name: item-service
+  cloud:
+    config:
+      override-none: true
 
 # item  8001
 # user  8101
