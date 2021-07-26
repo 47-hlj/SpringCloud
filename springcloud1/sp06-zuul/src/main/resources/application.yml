@@ -21,13 +21,13 @@ zuul:
     order-service: /order-service/**
   retryable: true
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 500
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 500
 
 management:
   endpoints:

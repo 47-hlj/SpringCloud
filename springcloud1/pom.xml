@@ -10,6 +10,7 @@
         <module>sp04-orderservice</module>
         <module>sp05-eureka</module>
         <module>sp06-zuul</module>
+        <module>sp07-hystrix-dashboard</module>
     </modules>
 
     <parent>

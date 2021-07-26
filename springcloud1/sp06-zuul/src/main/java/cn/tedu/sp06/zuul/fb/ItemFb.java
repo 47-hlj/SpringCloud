@@ -61,18 +61,17 @@ public class ItemFb implements FallbackProvider {
             @Override
             public void close() {
                 // 用来关闭下面的流
-                // BAIS内存数组流，不占用底层系统资源，不需要关闭
+                // BAIS 内存数组流，不占用底层系统资源，不需要关闭
 
                 // 文件流，占用系统文件资源
                 // 网络流，占用网络资源
                 // 数据库流，占用数据库资源
-
             }
 
             @Override
             public InputStream getBody() throws IOException {
-                // JsonResult -->{code:500,msg:调用后台服务出错，data:null}
-                String json= JsonResult.err().code(500).msg("调用后台服务出错").toString();
+                // JsonResult --> {code:500, msg:调用后台服务出错, data:null}
+                String json = JsonResult.err().code(500).msg("调用后台服务出错").toString();
 
                 // 将 json 封装到 BAIS
                 return new ByteArrayInputStream(json.getBytes("UTF-8"));
@@ -80,8 +79,8 @@ public class ItemFb implements FallbackProvider {
 
             @Override
             public HttpHeaders getHeaders() {
-                // Content-Type:application/json;charset=UTF-8
-                HttpHeaders httpHeaders=new HttpHeaders();
+                // Content-Type: application/json;charset=UTF-8
+                HttpHeaders httpHeaders = new HttpHeaders();
                 httpHeaders.set("Content-Type","application/json;charset=UTF-8");
                 return httpHeaders;
             }

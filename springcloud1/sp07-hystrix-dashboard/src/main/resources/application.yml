@@ -1,0 +1,6 @@
+server:
+  port: 4001
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost
