@@ -37,15 +37,15 @@ public class ItemController {
          */
         List<Item> items=itemService.getItems(orderId);
         // 为了测试响应超时失败，添加随机延迟代码
-//        double s=0.9;
-//        if(Math.random()<s){
-//            //90%概率延迟加载
-//            //随机时长0到5秒
-//            int t = new Random().nextInt(5000);
-//            System.out.println("延迟： "+t);
-//            Thread.sleep(t);
-//
-//        }
+        double s=0.9;
+        if(Math.random()<s){
+            //90%概率延迟加载
+            //随机时长0到5秒
+            int t = new Random().nextInt(5000);
+            System.out.println("延迟： "+t);
+            Thread.sleep(t);
+
+        }
         return JsonResult.ok().data(items);
     }
 
