@@ -9,5 +9,6 @@
     <file url="file://$PROJECT_DIR$/springcloud1/sp06-zuul/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud1/sp07-hystrix-dashboard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud1/sp08-turbine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud1/sp09-config/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/47-hlj/SpringCloud   # git远程仓库
+          search-paths: springcloud1/config   #仓库中的子目录
+server:
+  port: 6001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka

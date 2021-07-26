@@ -12,6 +12,7 @@
         <module>sp06-zuul</module>
         <module>sp07-hystrix-dashboard</module>
         <module>sp08-turbine</module>
+        <module>sp09-config</module>
     </modules>
 
     <parent>
