@@ -11,6 +11,7 @@
         <module name="sp03-userservice" />
         <module name="sp04-orderservice" />
         <module name="sp09-config" />
+        <module name="rabbitmq-api" />
         <module name="sp06-zuul" />
         <module name="sp07-hystrix-dashboard" />
         <module name="sp08-turbine" />
@@ -19,6 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="rabbitmq-api" target="8" />
       <module name="sp01-commons" target="8" />
       <module name="sp02-itemservice" target="8" />
       <module name="sp03-userservice" target="8" />
