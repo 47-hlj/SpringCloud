@@ -32,7 +32,7 @@ public class Producer {
         while (true){
             System.out.print("输入消息：");
             String s=new Scanner(System.in).nextLine();
-            //在第三个参数添加持久参数，持久化常量
+            // 第二个参数对 fanout 交换机无效
             channel.basicPublish("logs","", null,s.getBytes());
         }
     }
