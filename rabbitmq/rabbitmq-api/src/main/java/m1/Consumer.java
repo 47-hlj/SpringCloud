@@ -8,7 +8,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * @author 47HLJ
  * @date 2021/7/27 9:14
- * @description
+ * @description   简单模式的服务消费者
  */
 public class Consumer {
     public static void main(String[] args) throws IOException, TimeoutException {
@@ -45,6 +45,11 @@ public class Consumer {
 
 
         //4.开始接受信息  收到的消息会传递到一个回调对象进行处理 (队列名,true,处理消息的回调对象,取消消息处理时的回调对象)
+        /*
+        第二个参数 autoAck
+        - autoAck=true  自动确认(Acknowledgment)
+        - autoAck=false 手动确认
+         */
         channel.basicConsume("helloworld",true,deliverCallback,cancelCallback);
     }
 }
