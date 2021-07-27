@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloud.iml" filepath="$PROJECT_DIR$/.idea/SpringCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq/pd-web/pd-web.iml" filepath="$PROJECT_DIR$/rabbitmq/pd-web/pd-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/rabbitmq-api/rabbitmq-api.iml" filepath="$PROJECT_DIR$/rabbitmq/rabbitmq-api/rabbitmq-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud1/sp01-commons/sp01-commons.iml" filepath="$PROJECT_DIR$/springcloud1/sp01-commons/sp01-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud1/sp02-itemservice/sp02-itemservice.iml" filepath="$PROJECT_DIR$/springcloud1/sp02-itemservice/sp02-itemservice.iml" />

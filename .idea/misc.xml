@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/springcloud1/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/rabbitmq-api/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq/pd-web/pom.xml" />
       </list>
     </option>
   </component>

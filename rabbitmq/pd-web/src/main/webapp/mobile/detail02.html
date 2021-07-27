@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="../js/vue.js">
+	
+</script>
+<script type="text/javascript" src="../js/axios.min.js">
+	
+</script>
+<script type="text/javascript" src="../js/util.js">
+	
+</script>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="app" class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="mobileIndex.html">返回</a> <br>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+<script type="text/javascript">
+	var vue = new Vue({
+		el : "#app",
+		mounted : function() {
+			//断点跟踪getParamMap
+			var map = getParamMap();
+			var itemId = map.get("itemId");
+			console.log(itemId);
+		}
+	});
+</script>

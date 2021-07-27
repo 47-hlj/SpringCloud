@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/bootstrap.css"
+type="text/css"
+rel="stylesheet"
+/>
+<script 
+src="../js/vue.js"
+type="text/javascript"></script>
+<script 
+src="../js/axios.min.js"
+type="text/javascript"></script>
+</head>
+<body>
+<div class="container" id="app">
+  <div class=row>
+     <div class="col-xs-12">
+        <a href="index.html">返回</a>
+     </div>
+  </div>
+  <div class=row>
+    <div class="col-xs-12">
+  <img v-bind:src="item.image"><br>
+  <span>{{item.title}}</span>
+  <span>{{item.sellPoint}}</span>
+  <div v-html="item.desc"></div>
+    </div>
+  
+  </div>
+
+</div>
+</body>
+<script src="../js/util.js"
+type="text/javascript">
+</script>
+<script type="text/javascript">
+var myArray=new Array();
+myArray[0]="root";
+myArray["itemId"]=28;
+console.log(myArray["itemId"]);
+
+var map=getParamMap();
+var itemId=map.get("itemId");
+console.log("itemId="+itemId);
+var options={
+		el:"#app",
+		data:{item:null},
+		mounted:function()
+		{
+			var url="/api/getItemDetail.html?itemId="
+					+itemId;
+			axios.get(url)
+			.then(function(response){
+				var serverData=response.data;
+				var item=serverData.data;
+				this.vue.item=item;
+			})
+			.catch(function(e){
+				console.log("联网出错了");
+			});
+		}
+};
+var vue=new Vue(options);
+
+</script>
+</html>
+
+
+

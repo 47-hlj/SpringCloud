@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function setUsername()
+{
+	var username=document.getElementById("username");
+	username.value="android";
+	}
+function call()
+{
+	//js中window对象没有androidPhone属性
+	//在手机上运行时，window.androidPhone由android来执行
+	window.androidPhoneObject.call();
+}
+	
+</script>
+</head>
+<body>
+<input type="button" value="110" onClick="call()"/>
+username:<input id="username">
+</body>
+
+</html>

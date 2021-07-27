@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+src="../js/vue.js"
+ type="text/javascript">
+</script>
+<script
+src="../js/axios.min.js"
+ type="text/javascript">
+</script>
+
+</head>
+<body>
+<div id="app"></div>
+</body>
+<script type="text/javascript">
+var options={
+		el:"#app",
+		mounted:function(){
+			//url必须在浏览器中测试过了，拷贝过来
+			var url="/api/getIndexItem.html";
+			//联网成功后，浏览器到到json数据vue框架调then函数
+			//出错了，调catch函数
+			axios.get(url)
+			.then(function(response){
+				console.log(response)
+				//response有6个属性，config,headers
+				var serverData=response.data;
+				//serverData是服务器返回的数据，有status,data,msg
+				var items=serverData.data;
+				for (var i=0;i<items.length;i++)
+					{
+					console.log(items[i].title);
+					}
+			})
+			.catch(function(e)
+					{console.log(e);}
+			);
+		}
+}
+var vue=new Vue(options);
+</script>
+</html>
