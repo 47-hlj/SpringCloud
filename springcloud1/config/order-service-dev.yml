@@ -9,6 +9,9 @@ spring:
     port: 5672
     username: 47hlj
     password: hlj172532
+  zipkin:
+    sender:
+      type: rabbit
 server:
   port: 8201
 

@@ -1,6 +1,14 @@
 spring:
   application:
     name: zuul
+  rabbitmq:
+    host: 47.99.53.71
+    port: 5672
+    username: 47hlj
+    password: hlj172532
+  zipkin:
+    sender:
+      type: rabbit
 
 # eureka 2001
 # zuul   3001

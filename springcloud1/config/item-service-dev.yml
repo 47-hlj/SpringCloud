@@ -10,6 +10,9 @@ spring:
     port: 5672
     username: 47hlj
     password: hlj172532
+  zipkin:
+    sender:
+      type: rabbit
 # item  8001
 # user  8101
 # order 8201
