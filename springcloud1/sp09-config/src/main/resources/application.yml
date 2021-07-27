@@ -7,6 +7,11 @@ spring:
         git:
           uri: https://github.com/47-hlj/SpringCloud   # git远程仓库
           search-paths: springcloud1/config   #仓库中的子目录
+  rabbitmq:
+    host: 47.99.53.71
+    port: 5672
+    username: 47hlj
+    password: hlj172532
 server:
   port: 6001
 eureka:
