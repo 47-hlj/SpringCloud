@@ -40,9 +40,6 @@ public class Consumer {
             channel.queueBind(queue,"direct_logs",k);
         }
 
-        //第三个参数对fanout交换机无效
-        channel.queueBind(queue,"logs","");
-
         //3.创建回调对象
         DeliverCallback deliverCallback = new DeliverCallback() {
             @Override
