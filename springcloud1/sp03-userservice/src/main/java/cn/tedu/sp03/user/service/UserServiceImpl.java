@@ -6,6 +6,7 @@ import cn.tedu.web.util.JsonUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,9 @@ import java.util.List;
  * @author 47HLJ
  * @date 2021/7/20 15:47
  * @description
+ * 只有添加了@RefreshScope 刷新到新的用户数据后，才能重新注入到这个对象
  */
+@RefreshScope
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {
