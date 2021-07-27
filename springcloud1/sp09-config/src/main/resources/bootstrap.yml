@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - VM.*  # 忽略的网卡
+      preferred-networks:
+        - 176\.17\.11\..+  #指定ip网段网卡
