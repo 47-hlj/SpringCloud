@@ -20,7 +20,7 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @GetMapping("/derease")
+    @GetMapping("/decrease")
     public String decrease(Long userId, BigDecimal money){
         accountService.decrease(userId, money);
         return "扣减账户金额成功";
