@@ -24,12 +24,14 @@
         <module name="sp07-hystrix-dashboard" />
         <module name="sp08-turbine" />
         <module name="account" />
+        <module name="order" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account" target="8" />
       <module name="db-init" target="8" />
       <module name="eureka-server" target="8" />
+      <module name="order" target="8" />
       <module name="order-parent" target="8" />
       <module name="pd-web" target="1.8" />
       <module name="pd-web-consumer" target="1.8" />
@@ -53,6 +55,7 @@
       <module name="account" options="-parameters" />
       <module name="db-init" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="order" options="-parameters" />
       <module name="pd-web" options="-parameters" />
       <module name="pd-web-consumer" options="-parameters" />
       <module name="rabbitmq-springboot" options="-parameters" />

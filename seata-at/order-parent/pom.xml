@@ -6,6 +6,7 @@
     <modules>
         <module>account</module>
         <module>storage</module>
+        <module>order</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

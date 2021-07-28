@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/seata-at/order-parent/account/account.iml" filepath="$PROJECT_DIR$/seata-at/order-parent/account/account.iml" />
       <module fileurl="file://$PROJECT_DIR$/seata-at/db-init/db-init.iml" filepath="$PROJECT_DIR$/seata-at/db-init/db-init.iml" />
       <module fileurl="file://$PROJECT_DIR$/seata-at/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/seata-at/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seata-at/order-parent/order/order.iml" filepath="$PROJECT_DIR$/seata-at/order-parent/order/order.iml" />
       <module fileurl="file://$PROJECT_DIR$/seata-at/order-parent/order-parent.iml" filepath="$PROJECT_DIR$/seata-at/order-parent/order-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/pd-web/pd-web.iml" filepath="$PROJECT_DIR$/rabbitmq/pd-web/pd-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/pd-web-consumer/pd-web-consumer.iml" filepath="$PROJECT_DIR$/rabbitmq/pd-web-consumer/pd-web-consumer.iml" />
