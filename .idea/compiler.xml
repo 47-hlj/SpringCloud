@@ -12,6 +12,7 @@
         <module name="sp09-config" />
         <module name="rabbitmq-api" />
         <module name="db-init" />
+        <module name="storage" />
         <module name="sp05-eureka" />
         <module name="sp01-commons" />
         <module name="pd-web" />
@@ -44,6 +45,7 @@
       <module name="sp08-turbine" target="8" />
       <module name="sp09-config" target="8" />
       <module name="springcloud1" target="1.8" />
+      <module name="storage" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -63,6 +65,7 @@
       <module name="sp07-hystrix-dashboard" options="-parameters" />
       <module name="sp08-turbine" options="-parameters" />
       <module name="sp09-config" options="-parameters" />
+      <module name="storage" options="-parameters" />
     </option>
   </component>
 </project>

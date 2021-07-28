@@ -5,6 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>account</module>
+        <module>storage</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

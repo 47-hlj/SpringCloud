@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/springcloud1/sp08-turbine/sp08-turbine.iml" filepath="$PROJECT_DIR$/springcloud1/sp08-turbine/sp08-turbine.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud1/sp09-config/sp09-config.iml" filepath="$PROJECT_DIR$/springcloud1/sp09-config/sp09-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud1/springcloud1.iml" filepath="$PROJECT_DIR$/springcloud1/springcloud1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seata-at/order-parent/storage/storage.iml" filepath="$PROJECT_DIR$/seata-at/order-parent/storage/storage.iml" />
     </modules>
   </component>
 </project>
