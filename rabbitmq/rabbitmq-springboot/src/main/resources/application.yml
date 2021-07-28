@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    host: 47.99.53.71
+    port: 5672
+    username: 47hlj
+    password: hlj172532

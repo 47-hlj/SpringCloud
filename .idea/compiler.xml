@@ -7,24 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sp02-itemservice" />
         <module name="sp03-userservice" />
         <module name="sp04-orderservice" />
         <module name="sp09-config" />
         <module name="rabbitmq-api" />
-        <module name="sp06-zuul" />
-        <module name="sp07-hystrix-dashboard" />
-        <module name="sp08-turbine" />
         <module name="sp05-eureka" />
         <module name="sp01-commons" />
         <module name="pd-web" />
         <module name="pd-web-consumer" />
+        <module name="sp02-itemservice" />
+        <module name="rabbitmq-springboot" />
+        <module name="sp06-zuul" />
+        <module name="sp07-hystrix-dashboard" />
+        <module name="sp08-turbine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="pd-web" target="1.8" />
       <module name="pd-web-consumer" target="1.8" />
       <module name="rabbitmq-api" target="8" />
+      <module name="rabbitmq-springboot" target="8" />
       <module name="sp01-commons" target="8" />
       <module name="sp02-itemservice" target="8" />
       <module name="sp03-userservice" target="8" />
@@ -41,6 +43,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="pd-web" options="-parameters" />
       <module name="pd-web-consumer" options="-parameters" />
+      <module name="rabbitmq-springboot" options="-parameters" />
       <module name="sp01-commons" options="-parameters" />
       <module name="sp02-itemservice" options="-parameters" />
       <module name="sp03-userservice" options="-parameters" />
