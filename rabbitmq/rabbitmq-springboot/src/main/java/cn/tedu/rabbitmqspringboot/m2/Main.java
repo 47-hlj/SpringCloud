@@ -12,6 +12,13 @@ import javax.annotation.PostConstruct;
  * @author 47HLJ
  * @date 2021/7/28 10:14
  * @description
+ * 合理分发
+ * 1. 手动ack，spring集成后默认是手动ack，spring自动执行发送回执操作
+ * 2. qos=1，yml配置 pre-fetch=1，(预抓取信息条数)默认spring设置时 250
+ *
+ * 持久化
+ * 1. 队列持久化
+ * 2. 消息持久化，spring默认把消息设置为持久消息
  */
 @SpringBootApplication
 public class Main {
@@ -38,7 +45,6 @@ public class Main {
         // 在新的线程中，执行send() 方法
         // lambda 表达式简化上面匿名内部类的语法格式
         new Thread(()->p.send()).start();
-
     }
 }
 

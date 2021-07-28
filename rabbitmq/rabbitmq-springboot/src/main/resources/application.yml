@@ -4,3 +4,6 @@ spring:
     port: 5672
     username: 47hlj
     password: hlj172532
+    listener:
+      simple:
+        prefetch: 1
