@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/rabbitmq/pd-web/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pd-web-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/rabbitmq-springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/seata-at/db-init/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,6 +11,7 @@
         <module name="sp04-orderservice" />
         <module name="sp09-config" />
         <module name="rabbitmq-api" />
+        <module name="db-init" />
         <module name="sp05-eureka" />
         <module name="sp01-commons" />
         <module name="pd-web" />
@@ -23,6 +24,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="db-init" target="8" />
       <module name="pd-web" target="1.8" />
       <module name="pd-web-consumer" target="1.8" />
       <module name="rabbitmq-api" target="8" />
@@ -41,6 +43,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="db-init" options="-parameters" />
       <module name="pd-web" options="-parameters" />
       <module name="pd-web-consumer" options="-parameters" />
       <module name="rabbitmq-springboot" options="-parameters" />
