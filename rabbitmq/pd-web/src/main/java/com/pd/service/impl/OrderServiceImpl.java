@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,13 +54,16 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	PdOrderItemMapper pdOrderItemMapper;
 
-
-
+	//spring封装用来发送消息的封装对象
+	@Autowired
+	private AmqpTemplate amqpTemplate;
 
 	public String saveOrder(PdOrder pdOrder) throws Exception {
 		String orderId = generateId();
 		pdOrder.setOrderId(orderId);
 
+		//转换并发送，pdOrder对象序列化转成byte[]数组
+		amqpTemplate.convertAndSend("orderQueue",pdOrder);
 
 //		PdShipping pdShipping = pdShippingMapper.selectByPrimaryKey(pdOrder.getAddId());
 //		pdOrder.setShippingName(pdShipping.getReceiverName());
