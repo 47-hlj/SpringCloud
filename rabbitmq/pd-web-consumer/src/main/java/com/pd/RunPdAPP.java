@@ -23,7 +23,7 @@ public class RunPdAPP{
 	 * @return
 	 */
 	@Bean
-	public Queue orederQueue(){
+	public Queue orderQueue(){
 		return new Queue("orderQueue",true,false,false);
 	}
 }
