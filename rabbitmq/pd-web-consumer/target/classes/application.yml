@@ -1,0 +1,24 @@
+server:
+  port: 81
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.99.53.71:3306/pd_store?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: hlj172532
+  rabbitmq:
+    host: 47.99.53.71
+    port: 5672
+    username: 47hlj
+    password: hlj172532
+mybatis:
+  mapperLocations: classpath:com.pd.mapper/*.xml
+
+logging:
+  level:
+    cn.tedu.ssm.mapper: debug
+resources: # 指定静态资源的路径
+  static-locations: classpath:/
+  cache-period: 0

@@ -18,10 +18,12 @@
         <module name="sp05-eureka" />
         <module name="sp01-commons" />
         <module name="pd-web" />
+        <module name="pd-web-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="pd-web" target="1.8" />
+      <module name="pd-web-consumer" target="1.8" />
       <module name="rabbitmq-api" target="8" />
       <module name="sp01-commons" target="8" />
       <module name="sp02-itemservice" target="8" />
@@ -38,6 +40,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="pd-web" options="-parameters" />
+      <module name="pd-web-consumer" options="-parameters" />
       <module name="sp01-commons" options="-parameters" />
       <module name="sp02-itemservice" options="-parameters" />
       <module name="sp03-userservice" options="-parameters" />
