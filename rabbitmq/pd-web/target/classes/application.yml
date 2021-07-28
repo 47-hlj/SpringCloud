@@ -8,6 +8,11 @@ spring:
     url: jdbc:mysql://47.99.53.71:3306/pd_store?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: root
     password: hlj172532
+  rabbitmq:
+    host: 47.99.53.71
+    port: 5672
+    username: 47hlj
+    password: hlj172532
 mybatis:
   mapperLocations: classpath:com.pd.mapper/*.xml
 

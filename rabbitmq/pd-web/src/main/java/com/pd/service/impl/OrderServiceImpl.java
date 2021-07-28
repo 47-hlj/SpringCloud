@@ -55,38 +55,38 @@ public class OrderServiceImpl implements OrderService {
 
 
 
-	
+
 	public String saveOrder(PdOrder pdOrder) throws Exception {
 		String orderId = generateId();
 		pdOrder.setOrderId(orderId);
 
-		
-		PdShipping pdShipping = pdShippingMapper.selectByPrimaryKey(pdOrder.getAddId());
-		pdOrder.setShippingName(pdShipping.getReceiverName());
-		pdOrder.setShippingCode(pdShipping.getReceiverAddress());
-		pdOrder.setStatus(1);// 
-		pdOrder.setPaymentType(1);
-		pdOrder.setPostFee(10D);
-		pdOrder.setCreateTime(new Date());
 
-		double payment = 0;
-		List<ItemVO> itemVOs = selectCartItemByUseridAndItemIds(pdOrder.getUserId(), pdOrder.getItemIdList());
-		for (ItemVO itemVO : itemVOs) {
-			PdOrderItem pdOrderItem = new PdOrderItem();
-			String id = generateId();
-			//String id="2";
-			pdOrderItem.setId(id);
-			pdOrderItem.setOrderId(orderId);
-			pdOrderItem.setItemId("" + itemVO.getPdItem().getId());
-			pdOrderItem.setTitle(itemVO.getPdItem().getTitle());
-			pdOrderItem.setPrice(itemVO.getPdItem().getPrice());
-			pdOrderItem.setNum(itemVO.getPdCartItem().getNum());
-
-			payment = payment + itemVO.getPdCartItem().getNum() * itemVO.getPdItem().getPrice();
-			pdOrderItemMapper.insert(pdOrderItem);
-		}
-		pdOrder.setPayment(payment);
-		pdOrderMapper.insert(pdOrder);
+//		PdShipping pdShipping = pdShippingMapper.selectByPrimaryKey(pdOrder.getAddId());
+//		pdOrder.setShippingName(pdShipping.getReceiverName());
+//		pdOrder.setShippingCode(pdShipping.getReceiverAddress());
+//		pdOrder.setStatus(1);//
+//		pdOrder.setPaymentType(1);
+//		pdOrder.setPostFee(10D);
+//		pdOrder.setCreateTime(new Date());
+//
+//		double payment = 0;
+//		List<ItemVO> itemVOs = selectCartItemByUseridAndItemIds(pdOrder.getUserId(), pdOrder.getItemIdList());
+//		for (ItemVO itemVO : itemVOs) {
+//			PdOrderItem pdOrderItem = new PdOrderItem();
+//			String id = generateId();
+//			//String id="2";
+//			pdOrderItem.setId(id);
+//			pdOrderItem.setOrderId(orderId);
+//			pdOrderItem.setItemId("" + itemVO.getPdItem().getId());
+//			pdOrderItem.setTitle(itemVO.getPdItem().getTitle());
+//			pdOrderItem.setPrice(itemVO.getPdItem().getPrice());
+//			pdOrderItem.setNum(itemVO.getPdCartItem().getNum());
+//
+//			payment = payment + itemVO.getPdCartItem().getNum() * itemVO.getPdItem().getPrice();
+//			pdOrderItemMapper.insert(pdOrderItem);
+//		}
+//		pdOrder.setPayment(payment);
+//		pdOrderMapper.insert(pdOrder);
 		return orderId;
 	}
 
@@ -127,13 +127,13 @@ public class OrderServiceImpl implements OrderService {
 		return itemVOs;
 	}
 
-	
+
 	public PdOrder selectById(String orderId) throws Exception {
 		PdOrder pdOrder = pdOrderMapper.selectByPrimaryKey(orderId);
 		return pdOrder;
 	}
 
-	
+
 	public List<OrderVO> selectByUserIdAndStatus
 	(Long userId, int status) throws Exception {
 		//where user_id=14 and status!=9 order by create_time desc
@@ -148,7 +148,7 @@ public class OrderServiceImpl implements OrderService {
 		orderExample.setOrderByClause("create_time desc");
 		List<PdOrder> orders=pdOrderMapper
 				.selectByExample(orderExample);
-		
+
 		List<OrderVO> orderVOs=new ArrayList<>();
 		for (PdOrder pdOrder:orders)
 		{
@@ -161,7 +161,7 @@ public class OrderServiceImpl implements OrderService {
 					.selectByExample(itemExample);
 			for (PdOrderItem pdOrderItem:orderItems)
 			{
-				
+
 			//3.3.1 example,criteria
 				PdItemParamItemExample example=
 						new PdItemParamItemExample();
@@ -170,7 +170,7 @@ public class OrderServiceImpl implements OrderService {
 				long itemId=Long.parseLong(pdOrderItem
 						.getItemId());
 				paramCriteria.andItemIdEqualTo(itemId);
-				
+
 				List<PdItemParamItem> paramItemList=pdItemParamItemMapper
 						.selectByExampleWithBLOBs(example);
 				List<Params> paramsList=new ArrayList<>();
@@ -180,27 +180,27 @@ public class OrderServiceImpl implements OrderService {
 					PdItemParamItem pdItemParamItem=
 							paramItemList.get(0);
 					String paramData=pdItemParamItem
-							.getParamData();					
+							.getParamData();
 					List<PdItemParamData> paramDataList=JsonUtils
-							.jsonToList(paramData, 
+							.jsonToList(paramData,
 									PdItemParamData.class);
 					paramsList=paramDataList.get(0).getParams();
 				}
-			pdOrderItem.setParamsList(paramsList);	
+			pdOrderItem.setParamsList(paramsList);
 			}
 			OrderVO orderVO=new OrderVO();
 			orderVO.setPdOrder(pdOrder);
 			orderVO.setPdOrderItems(orderItems);
-			
+
 			orderVOs.add(orderVO);
 		}
 		return orderVOs;
 	}
 
-	
-	
 
-	
+
+
+
 	public PdOrder findOrderByOrderid(String orderId) throws Exception {
 PdOrder pdOrder=pdOrderMapper
 .selectByPrimaryKey(orderId);
@@ -212,14 +212,14 @@ PdOrder pdOrder=pdOrderMapper
 //update pd_order set status=8 where orderId=100
 		PdOrder pdOrder=new PdOrder();
 		pdOrder.setStatus(status);
-		
+
 		PdOrderExample example=new PdOrderExample();
 		PdOrderExample.Criteria criteria=example.or();
 		criteria.andOrderIdEqualTo(orderId);
-		
+
 		int row=pdOrderMapper
 				.updateByExampleSelective
-				(pdOrder, example); 
+				(pdOrder, example);
 		return row;
 	}
 
