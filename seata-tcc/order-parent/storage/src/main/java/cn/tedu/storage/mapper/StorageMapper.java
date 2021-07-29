@@ -33,7 +33,7 @@ public interface StorageMapper extends BaseMapper<Storage> {
     void updateResidueToFrozen(Long productId,Integer count);
 
     /**
-     * 冻结到可用
+     * 冻结 -> 已使用
      * @param productId
      * @param count
      */

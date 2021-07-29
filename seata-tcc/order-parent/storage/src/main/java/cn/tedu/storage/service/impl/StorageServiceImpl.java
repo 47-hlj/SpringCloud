@@ -1,7 +1,7 @@
 package cn.tedu.storage.service.impl;
 
-import cn.tedu.storage.mapper.StorageMapper;
 import cn.tedu.storage.service.StorageService;
+import cn.tedu.storage.tcc.StorageTccAction;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,9 +15,12 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class StorageServiceImpl implements StorageService {
     @Autowired
-    private StorageMapper storageMapper;
+    private StorageTccAction storageTccAction;
+
     @Override
     public void decrease(Long productId, Integer count) {
-        storageMapper.decrease(productId, count);
+        //storageMapper.decrease(productId, count);
+        storageTccAction.prepare(null,productId,count);
+
     }
 }

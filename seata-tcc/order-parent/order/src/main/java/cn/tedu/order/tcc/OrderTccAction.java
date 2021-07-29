@@ -15,8 +15,15 @@ import java.math.BigDecimal;
  */
 @LocalTCC
 public interface OrderTccAction {
+
     /**
      * 第一阶段 try
+     * @param context
+     * @param id
+     * @param userId
+     * @param productId
+     * @param count
+     * @param money
      * @return
      * 为了避开 seata 的一个bug，这里不使用封装对象，
      * 而是一个一个的接收订单数据
@@ -33,12 +40,14 @@ public interface OrderTccAction {
 
     /**
      * Confirm
+     * @param context
      * @return
      */
     boolean commit(BusinessActionContext context);
 
     /**
      * Cancel
+     * @param context
      * @return
      */
     boolean rollback(BusinessActionContext context);

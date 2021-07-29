@@ -8,31 +8,26 @@
         <result column="used" property="used" jdbcType="INTEGER" />
         <result column="residue" property="residue" jdbcType="INTEGER" />
     </resultMap>
-    <update id="decrease">
-        UPDATE storage
-        SET used = used + #{count},residue = residue - #{count}
-        WHERE product_id = #{productId}
-    </update>
-    <select id="selectByProductId" resultType="cn.tedu.storage.entity.Storage">
+    <select id="selectByProductId" resultMap="BaseResultMap">
         select * from storage
-        where product_id=#{productId}
+        where product_id = #{productId}
     </select>
     <update id="updateResidueToFrozen">
         update storage
-        set residue=residue-#{count}
+        set residue=residue-#{count},
             frozen=frozen+#{count}
-        where product_id=#{productId}
+        where product_id = #{productId}
     </update>
     <update id="updateFrozenToUsed">
         update storage
-        set frozen=frozen-#{count}
-            used=used+#{count}
-        where product_id=#{productId}
+        set Frozen=Frozen-#{count},
+            Used=Used+#{count}
+        where product_id = #{productId}
     </update>
     <update id="updateFrozenToResidue">
         update storage
-        set frozen=frozen-#{count}
-            residue=residue+#{count}
-        where product_id=#{productId}
+        set Frozen=Frozen-#{count},
+            Residue=Residue+#{count}
+        where product_id = #{productId}
     </update>
 </mapper>
