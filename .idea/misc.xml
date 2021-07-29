@@ -12,6 +12,10 @@
         <option value="$PROJECT_DIR$/seata-at/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/seata-at/order-parent/pom.xml" />
         <option value="$PROJECT_DIR$/seata-at/easy-id-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/seata-tcc/db-init/pom.xml" />
+        <option value="$PROJECT_DIR$/seata-tcc/easy-id-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/seata-tcc/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/seata-tcc/order-parent/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    inetutils:
+      preferred-networks:
+        - 176\.17\.11\..+

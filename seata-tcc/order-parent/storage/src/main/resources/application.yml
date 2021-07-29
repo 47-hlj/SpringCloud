@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: storage
+  datasource:
+    url: jdbc:mysql://47.99.53.71:3306/seata_storage?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: hlj172532
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    alibaba:
+      seata:
+        tx_service_group: order_tx_group
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true #注册ip地址，而不是主机名
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: cn.tedu.storage.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    cn:
+      tedu:
+        storage:
+          mapper: debug
