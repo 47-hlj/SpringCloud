@@ -6,11 +6,12 @@ import cn.tedu.order.feign.EasyIdClient;
 import cn.tedu.order.feign.StorageClient;
 import cn.tedu.order.mapper.OrderMapper;
 import cn.tedu.order.service.OrderService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Random;
 
 /**
  * @author 47HLJ
@@ -33,6 +34,8 @@ public class OrderServiceImpl implements OrderService {
     private StorageClient storageClient;
 
     @Override
+    @Transactional
+    @GlobalTransactional
     public void create(Order order) {
         //TODO 调用发号器获取订单id
         String s = easyIdClient.nextId("order_business");
@@ -42,9 +45,9 @@ public class OrderServiceImpl implements OrderService {
         orderMapper.create(order);
 
         // 减少库存
-        storageClient.decrease(order.getProductId(),order.getCount());
+        //storageClient.decrease(order.getProductId(),order.getCount());
 
         // 扣减账户
-        accountClient.decrease(order.getUserId(),order.getMoney());
+        //accountClient.decrease(order.getUserId(),order.getMoney());
     }
 }
