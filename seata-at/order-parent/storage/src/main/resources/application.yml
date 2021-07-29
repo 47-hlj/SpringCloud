@@ -3,9 +3,15 @@ spring:
     name: storage
   datasource:
     url: jdbc:mysql://47.99.53.71:3306/seata_storage?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    jdbcUrl: ${spring.datasource.url}
     username: root
     password: hlj172532
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: order_tx_group
+
 server:
   port: 8082
 eureka:
