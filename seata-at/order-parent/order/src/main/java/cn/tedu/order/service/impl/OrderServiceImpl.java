@@ -44,10 +44,10 @@ public class OrderServiceImpl implements OrderService {
         order.setId(orderId);
         orderMapper.create(order);
 
-        // 减少库存
-        //storageClient.decrease(order.getProductId(),order.getCount());
+        //减少库存
+        storageClient.decrease(order.getProductId(),order.getCount());
 
-        // 扣减账户
-        //accountClient.decrease(order.getUserId(),order.getMoney());
+        //扣减账户
+        accountClient.decrease(order.getUserId(),order.getMoney());
     }
 }
