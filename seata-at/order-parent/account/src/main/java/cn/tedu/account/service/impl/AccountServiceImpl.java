@@ -5,6 +5,7 @@ import cn.tedu.account.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
@@ -21,6 +22,7 @@ public class AccountServiceImpl implements AccountService {
     private AccountMapper accountMapper;
 
     @Override
+    @Transactional
     public void decrease(Long userId, BigDecimal money) {
         accountMapper.decrease(userId,money);
     }
