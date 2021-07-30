@@ -29,6 +29,7 @@
         <module name="sp06-zuul" />
         <module name="sp07-hystrix-dashboard" />
         <module name="sp08-turbine" />
+        <module name="rocketmq-api" />
         <module name="db-init (1)" />
         <module name="account" />
         <module name="order (1)" />
@@ -51,6 +52,7 @@
       <module name="pd-web-consumer" target="1.8" />
       <module name="rabbitmq-api" target="8" />
       <module name="rabbitmq-springboot" target="8" />
+      <module name="rocketmq-api" target="8" />
       <module name="sp01-commons" target="8" />
       <module name="sp02-itemservice" target="8" />
       <module name="sp03-userservice" target="8" />
