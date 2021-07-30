@@ -63,6 +63,6 @@ public class OrderServiceImpl implements OrderService {
         storageClient.decrease(order.getProductId(),order.getCount());
 
         // 扣减账户
-//        accountClient.decrease(order.getUserId(),order.getMoney());
+        accountClient.decrease(order.getUserId(),order.getMoney());
     }
 }

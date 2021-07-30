@@ -14,4 +14,32 @@
         SET residue = residue - #{money},used = used + #{money}
         where user_id = #{userId};
     </update>
+
+    <select id="selectByUserId" resultMap="BaseResultMap">
+        select * from account
+        where user_id = #{userId}
+    </select>
+
+    <update id="updateResidueToFrozen">
+        update account
+        set residue = residue - #{money},
+            frozen = frozen + #{money}
+        where user_id = #{userId}
+    </update>
+
+    <update id="updateFrozenToUsed">
+        update account
+        set frozen = frozen - #{money},
+            used = used + #{money}
+        where user_id = #{userId}
+    </update>
+
+    <update id="updateFrozenToResidue">
+        update account
+        set frozen = frozen - #{money},
+            residue = residue + #{money}
+        where user_id = #{userId}
+    </update>
+
+
 </mapper>

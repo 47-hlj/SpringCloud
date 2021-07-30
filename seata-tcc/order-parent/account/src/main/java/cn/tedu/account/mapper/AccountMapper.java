@@ -15,5 +15,39 @@ import java.math.BigDecimal;
 @Mapper
 public interface AccountMapper extends BaseMapper<Account> {
 
+    /**
+     * 减少账户库存
+     * @param userId
+     * @param money
+     */
     void decrease(Long userId, BigDecimal money);
+
+    /**
+     * 查询账户金额
+     * @param userId
+     * @return
+     */
+    Account selectByUserId(Long userId);
+
+    /**
+     * 可用 --> 冻结
+     * @param userId
+     * @param money
+     */
+    void updateResidueToFrozen(Long userId,BigDecimal money);
+
+    /**
+     * 冻结 --> 已使用
+     * @param userId
+     * @param money
+     */
+    void updateFrozenToUsed(Long userId,BigDecimal money);
+
+    /**
+     * 冻结 --> 可用
+     * @param userId
+     * @param money
+     */
+    void updateFrozenToResidue(Long userId,BigDecimal money);
+
 }

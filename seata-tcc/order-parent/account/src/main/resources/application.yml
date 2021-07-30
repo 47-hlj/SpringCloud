@@ -6,6 +6,10 @@ spring:
     username: root
     password: hlj172532
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    alibaba:
+      seata:
+        tx_service_group: order_tx_group
 
 # account 8081
 # storage 8082

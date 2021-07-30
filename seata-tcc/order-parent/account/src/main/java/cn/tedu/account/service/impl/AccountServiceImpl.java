@@ -1,7 +1,7 @@
 package cn.tedu.account.service.impl;
 
-import cn.tedu.account.mapper.AccountMapper;
 import cn.tedu.account.service.AccountService;
+import cn.tedu.account.tcc.AccountTccAction;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,10 +18,10 @@ import java.math.BigDecimal;
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
-    private AccountMapper accountMapper;
+    private AccountTccAction accountTccAction;
 
     @Override
     public void decrease(Long userId, BigDecimal money) {
-        accountMapper.decrease(userId,money);
+        accountTccAction.prepare(null,userId,money);
     }
 }
