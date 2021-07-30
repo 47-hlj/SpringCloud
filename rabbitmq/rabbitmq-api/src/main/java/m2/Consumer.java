@@ -1,4 +1,4 @@
-package cn.tedu.rabbitmqspringboot.m2;
+package m2;
 
 import com.rabbitmq.client.*;
 
