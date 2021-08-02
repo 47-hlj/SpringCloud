@@ -4,6 +4,12 @@
     <file url="file://$PROJECT_DIR$/rabbitmq/pd-web-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq/pd-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq/rabbitmq-springboot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketmq-dtx/db-init/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketmq-dtx/easy-id-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketmq-dtx/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketmq-dtx/order-parent/account/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketmq-dtx/order-parent/order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketmq-dtx/order-parent/storage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seata-at/db-init/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seata-at/easy-id-generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seata-at/eureka-server/src/main/java" charset="UTF-8" />

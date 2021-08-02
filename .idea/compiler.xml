@@ -19,11 +19,16 @@
         <module name="pd-web-consumer" />
         <module name="eureka-server" />
         <module name="easy-id-generator (1)" />
+        <module name="db-init (2)" />
+        <module name="order (2)" />
         <module name="order" />
         <module name="easy-id-generator" />
         <module name="sp03-userservice" />
         <module name="sp04-orderservice" />
+        <module name="storage (2)" />
         <module name="db-init" />
+        <module name="eureka-server (2)" />
+        <module name="account (2)" />
         <module name="sp02-itemservice" />
         <module name="rabbitmq-springboot" />
         <module name="sp06-zuul" />
@@ -33,21 +38,28 @@
         <module name="db-init (1)" />
         <module name="account" />
         <module name="order (1)" />
+        <module name="easy-id-generator (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account" target="8" />
       <module name="account (1)" target="8" />
+      <module name="account (2)" target="8" />
       <module name="db-init" target="8" />
       <module name="db-init (1)" target="8" />
+      <module name="db-init (2)" target="8" />
       <module name="easy-id-generator" target="1.8" />
       <module name="easy-id-generator (1)" target="1.8" />
+      <module name="easy-id-generator (2)" target="1.8" />
       <module name="eureka-server" target="8" />
       <module name="eureka-server (1)" target="8" />
+      <module name="eureka-server (2)" target="8" />
       <module name="order" target="8" />
       <module name="order (1)" target="8" />
+      <module name="order (2)" target="8" />
       <module name="order-parent" target="8" />
       <module name="order-parent (1)" target="8" />
+      <module name="order-parent (2)" target="8" />
       <module name="pd-web" target="1.8" />
       <module name="pd-web-consumer" target="1.8" />
       <module name="rabbitmq-api" target="8" />
@@ -65,20 +77,26 @@
       <module name="springcloud1" target="1.8" />
       <module name="storage" target="8" />
       <module name="storage (1)" target="8" />
+      <module name="storage (2)" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="account" options="-parameters" />
       <module name="account (1)" options="-parameters" />
+      <module name="account (2)" options="-parameters" />
       <module name="db-init" options="-parameters" />
       <module name="db-init (1)" options="-parameters" />
+      <module name="db-init (2)" options="-parameters" />
       <module name="easy-id-generator" options="-parameters" />
       <module name="easy-id-generator (1)" options="-parameters" />
+      <module name="easy-id-generator (2)" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="eureka-server (1)" options="-parameters" />
+      <module name="eureka-server (2)" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="order (1)" options="-parameters" />
+      <module name="order (2)" options="-parameters" />
       <module name="pd-web" options="-parameters" />
       <module name="pd-web-consumer" options="-parameters" />
       <module name="rabbitmq-springboot" options="-parameters" />
@@ -93,6 +111,7 @@
       <module name="sp09-config" options="-parameters" />
       <module name="storage" options="-parameters" />
       <module name="storage (1)" options="-parameters" />
+      <module name="storage (2)" options="-parameters" />
     </option>
   </component>
 </project>
