@@ -17,10 +17,11 @@
         <option value="$PROJECT_DIR$/seata-tcc/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/seata-tcc/order-parent/pom.xml" />
         <option value="$PROJECT_DIR$/rocketmq-dtx/rocketmq-api/pom.xml" />
-        <option value="$PROJECT_DIR$/rocketmq-dtx/easy-id-generator/pom.xml" />
         <option value="$PROJECT_DIR$/rocketmq-dtx/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/rocketmq-dtx/order-parent/pom.xml" />
         <option value="$PROJECT_DIR$/rocketmq-dtx/db-init/pom.xml" />
+        <option value="$PROJECT_DIR$/rocketmq-dtx/easy-id-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/rocketmq-dtx/order-parent/storage/pom.xml" />
       </list>
     </option>
   </component>

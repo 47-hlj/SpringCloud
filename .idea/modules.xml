@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/rocketmq-dtx/order-parent/order/order (2).iml" filepath="$PROJECT_DIR$/rocketmq-dtx/order-parent/order/order (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/seata-at/order-parent/order-parent.iml" filepath="$PROJECT_DIR$/seata-at/order-parent/order-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/seata-tcc/order-parent/order-parent (1).iml" filepath="$PROJECT_DIR$/seata-tcc/order-parent/order-parent (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/rocketmq-dtx/order-parent/order-parent (2).iml" filepath="$PROJECT_DIR$/rocketmq-dtx/order-parent/order-parent (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/pd-web/pd-web.iml" filepath="$PROJECT_DIR$/rabbitmq/pd-web/pd-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/pd-web-consumer/pd-web-consumer.iml" filepath="$PROJECT_DIR$/rabbitmq/pd-web-consumer/pd-web-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/rabbitmq-api/rabbitmq-api.iml" filepath="$PROJECT_DIR$/rabbitmq/rabbitmq-api/rabbitmq-api.iml" />
